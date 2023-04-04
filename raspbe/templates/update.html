@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container my-3">
+	<h2>Update the data in tree</h2><br>
+	  <form action="/update/{{Allwork.id}}" method="post">
+    <label for="title">Question</label>
+    <input type="text" class="form-control" name="title"id="title" value="{{Allwork.Question}}">
+    <div id="emailHelp" class="form-text"><b>Update as your preference</b></div>
+  </div>
+  <div class="container mb-3">
+    <label for="desc" class="form-label">Answer</label>
+        <input type="text" class="form-control" name="desc"id="desc" value="{{Allwork.Answer}}">
+
+  </div>
+  
+  <div class="container mb-3">
+    <button type="submit" class="btn btn-outline-primary btn-sm mx-1">Update</button>
+</form>
+  </div>
+  
+  {% endblock body %}
